@@ -39,7 +39,7 @@ jobs:
             VERSION="$(awk '/^## / { print $2; exit }' CHANGELOG.md | sed -e 's/\[//' -e 's/\]//')"
             tags="latest"
             oldversion=""
-            tmpversion="${VERSION}"ƒ
+            tmpversion="${VERSION}"
             while [ "${oldversion}" != "${tmpversion}" ]; do
               oldversion="${tmpversion}"
               tags="${tags} ${tmpversion}"
